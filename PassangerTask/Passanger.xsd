@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="https://www.coding-s.com/xml/passanger"
+    xmlns:tns="https://www.coding-s.com/xml/passanger"
+    elementFormDefault="qualified">
+
+    <element name="Passanger" type="tns:Passanger" />
+
+    <complexType name="Passanger">
+        <sequence>
+            <element name="name" type="string"></element>
+            <element name="dob" type="date"></element>
+            <element name="seatno" type="int"></element>
+            <element name="gender" type="string"></element>
+        </sequence>
+    </complexType>
+
+</schema>

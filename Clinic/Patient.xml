@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Patient xmlns:tns="https://www.coding-s.com/xml/patient"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://www.coding-s.com/xml/patient Patient.xsd
+                      ">
+  <tns:name>Aleks</tns:name>
+  <tns:age>29</tns:age>
+  <tns:gender>M</tns:gender>
+  <tns:phone>12345567</tns:phone>
+  <tns:paymentType>
+    <tns:insurance>
+      <tns:limit>10000</tns:limit>
+      <tns:Provider>Blue cross</tns:Provider>
+    </tns:insurance>
+  </tns:paymentType>
+</tns:Patient>

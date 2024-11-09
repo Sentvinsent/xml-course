@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tns:Passanger xmlns:tns="https://www.coding-s.com/xml/passanger"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://www.coding-s.com/xml/passanger Passanger.xsd
+                      ">
+  <tns:name>tns:name</tns:name>
+  <tns:dob>2001-01-01</tns:dob>
+  <tns:seatno>0</tns:seatno>
+  <tns:gender>tns:gender</tns:gender>
+</tns:Passanger>

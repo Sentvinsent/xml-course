@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="https://www.coding-s.com/xml/order"
+    xmlns:tns="https://www.coding-s.com/xml/order"
+    elementFormDefault="qualified">
+
+    <element name="Order" type="tns:Order" />
+
+    <complexType name="Order">
+        <sequence>
+            <element name="Customer" type="tns:Customer" />
+            <element name="Product" type="tns:Product" minOccurs="1" />
+        </sequence>
+    </complexType>
+
+    <complexType name="Customer">
+        <sequence>
+            <element name="Name" type="tns:String20Chars"></element>
+            <element name="Phone" type="tns:String20Chars" minOccurs="0"></element>
+        </sequence>
+    </complexType>
+
+    <complexType name="Product">
+        <sequence>
+            <element name="Name" type="tns:String20Chars" />
+            <element name="Description" type="tns:String100Chars" />
+            <element name="price" type="int" />
+            <element name="category" type="tns:Category" />
+        </sequence>
+    </complexType>
+
+    <simpleType name="String20Chars">
+        <restriction base="string">
+            <maxLength value="20" />
+        </restriction>
+    </simpleType>
+    <simpleType name="String100Chars">
+        <restriction base="string">
+            <maxLength value="100" />
+        </restriction>
+    </simpleType>
+    <simpleType name="Category">
+        <restriction base="string">
+            <enumeration value="Electronics" />
+            <enumeration value="Books" />
+            <enumeration value="Shoes" />
+        </restriction>
+    </simpleType>
+
+</schema>
