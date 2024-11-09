@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding="UTF-8" standalone="no"?>
+
+<!-- This xml document hold the license information -->
+<DriversLicense-1>
+    <Number>12345</Number>
+    <FirstName>Aleks</FirstName>
+    <LastName>Fylymonchuk</LastName>
+    <DateOfBirth>17/11/1995</DateOfBirth>
+    <VehicleType>Car</VehicleType>
+    <DateOfIssue>01/01/2024</DateOfIssue>
+    <![CDATA[Any text that will be ignored by parserer]]>
+    <!-- 6 to 10 years depending on citizenship -->
+    <ExpiryDate>01/01/2030</ExpiryDate>
+    <Photo location="servename/filename" />
+    <Address>
+        <Street>Main</Street>
+        <City>Gijon</City>
+        <State>Asturias</State>
+        <Country>Spain</Country>
+        <Zipcode>55232</Zipcode>
+    </Address>
+</DriversLicense-1>

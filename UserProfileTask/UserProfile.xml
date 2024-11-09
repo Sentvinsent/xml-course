@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding="UTF-8"?>
+
+<UserProfile>
+    <FirstName>Aleks</FirstName>
+    <LastName>Fylymonchuk</LastName>
+    <Password>12345</Password>
+    <Email>test@test.com</Email>
+    <Picture location="someserver/somefile" />
+</UserProfile>
