@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Event"
+    xmlns:tns="http://www.example.org/Event" elementFormDefault="qualified">
+
+    <include schemaLocation="./Common.xsd" />
+
+    <complexType name="Venue">
+        <sequence>
+            <element name="name" type="tns:StringMax25" />
+            <element name="street" type="tns:StringMax25" />
+            <element name="city" type="tns:StringMax25" />
+            <element name="state" type="tns:StringMax25" />
+            <element name="country" type="tns:StringMax25" />
+            <element name="zipcode" type="tns:StringMax25" />
+        </sequence>
+        <attribute name="id" type="tns:ID" use="required" />
+    </complexType>
+</schema>

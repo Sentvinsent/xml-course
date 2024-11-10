@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.example.org/Reservation"
+    xmlns:tns="http://www.example.org/Reservation" elementFormDefault="qualified">
+
+    <include schemaLocation="./Common.xsd" />
+    <complexType name="passanger">
+        <sequence>
+            <element name="FirstName" type="tns:StringMax20" />
+            <element name="LastName" type="tns:StringMax20" />
+            <element name="MiddleName" type="tns:StringMax20" />
+            <element name="Email" type="tns:StringMax20" />
+            <element name="Phone" type="tns:phone" />
+        </sequence>
+    </complexType>
+
+    <simpleType name="phone">
+        <restriction base="string">
+            <pattern value="[0-9]{10}" />
+        </restriction>
+    </simpleType>
+</schema>

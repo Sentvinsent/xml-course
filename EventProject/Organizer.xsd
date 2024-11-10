@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Event"
+    xmlns:tns="http://www.example.org/Event" elementFormDefault="qualified">
+
+    <include schemaLocation="./Common.xsd" />
+
+    <complexType name="Organizer">
+        <sequence>
+            <element name="name" type="tns:StringMax25" />
+            <element name="email" type="tns:email" />
+            <element name="phone" type="tns:phone" />
+        </sequence>
+        <attribute name="id" type="tns:ID" use="required" />
+    </complexType>
+</schema>

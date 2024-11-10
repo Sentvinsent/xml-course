@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.example.org/Reservation"
+    xmlns:tns="http://www.example.org/Reservation" elementFormDefault="qualified">
+
+    <include schemaLocation="./Flight.xsd" />
+    <include schemaLocation="./Passanger.xsd" />
+
+    <element name="Reservation">
+        <complexType>
+            <sequence>
+                <element name="flight" type="tns:flight" />
+                <element name="passanger" type="tns:passanger" />
+            </sequence>
+        </complexType>
+    </element>
+
+
+</schema>

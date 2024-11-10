@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Event"
+    xmlns:tns="http://www.example.org/Event" elementFormDefault="qualified">
+
+    <include schemaLocation="./Organizer.xsd" />
+    <include schemaLocation="./Venue.xsd" />
+    <include schemaLocation="./Paticipant.xsd" />
+    <include schemaLocation="./Common.xsd" />
+
+    <element name="Event">
+        <complexType>
+            <sequence>
+                <element name="name" type="tns:StringMax25" />
+                <element name="description" type="tns:StringMax200" />
+                <element name="price" type="tns:StringMax25" />
+                <element name="startTime" type="dateTime" />
+                <element name="endTime" type="dateTime" />
+                <element name="organizer" type="tns:Organizer" />
+                <element name="venue" type="tns:Venue" />
+                <element name="participant" type="tns:Participant" minOccurs="3"
+                    maxOccurs="unbounded" />
+            </sequence>
+            <attribute name="id" type="tns:ID" use="required" />
+        </complexType>
+    </element>
+</schema>

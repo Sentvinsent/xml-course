@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.example.org/Reservation"
+    xmlns:tns="http://www.example.org/Reservation" elementFormDefault="qualified">
+
+    <include schemaLocation="./Common.xsd" />
+
+    <complexType name="flight">
+        <sequence>
+            <element name="FlightNumber" type="tns:StringMax20" />
+            <element name="OperatingAirlines" type="tns:operatingAirlines" />
+            <element name="ArrivalCity" type="tns:StringMax20" />
+            <element name="DateOfDeparture" type="date" />
+            <element name="EstimatedTimeOfDeparture" type="time" />
+        </sequence>
+    </complexType>
+
+
+    <simpleType name="operatingAirlines">
+        <restriction base="string">
+            <enumeration value="US" />
+            <enumeration value="EU" />
+            <enumeration value="AUS" />
+            <enumeration value="UA" />
+        </restriction>
+    </simpleType>
+</schema>

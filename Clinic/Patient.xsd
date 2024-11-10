@@ -3,7 +3,11 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
     targetNamespace="https://www.coding-s.com/xml/patient"
     xmlns:tns="https://www.coding-s.com/xml/patient"
+    xmlns:common="https://www.coding-s.com/xml/Common"
     elementFormDefault="qualified">
+
+    <include schemaLocation="./PatientTypes.xsd" />
+    <import schemaLocation="./Common.xsd" namespace="https://www.coding-s.com/xml/Common" />
 
     <element name="Patient" type="tns:Patient" />
 
@@ -16,20 +20,7 @@
             <element name="phone" type="string" maxOccurs="3" />
             <element name="paymentType" type="tns:PaymentType" />
         </sequence>
-    </complexType>
-
-    <complexType name="PaymentType">
-        <choice>
-            <element name="cash" type="decimal" />
-            <element name="insurance" type="tns:Insurance" />
-        </choice>
-    </complexType>
-
-    <complexType name="Insurance">
-        <all>
-            <element name="Provider" type="string" />
-            <element name="limit" type="decimal" />
-        </all>
+        <attribute name="id" type="common:ID" use="required" />
     </complexType>
 
     <simpleType name="String15Chars">
